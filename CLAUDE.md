@@ -1,6 +1,3 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -20,11 +17,3 @@ This is a static website for Samavarta Association (Association Loi 1901), a Fre
 
 To view the website, simply open `index.html` in a browser. No build step or server required.
 
-The website embeds a PDF (`ressources/Familia-Surangama-2025-01.pdf`) directly in the page using the `<embed>` tag.
-
-## Content
-
-The page displays:
-- Association objective and activities
-- Member information (President, Secretary, Treasurer, Honorary Member)
-- Embedded artist portfolio PDF
