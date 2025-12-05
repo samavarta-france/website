@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samavarta Association</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJxnQvJlh2WQU2m3JtFW5ZPzjcKXsweTfp5f3I5R8aJc+QmA/qFG+k5jC5I1" crossorigin="anonymous">
+    <style>
+        .pdf-preview-card .card-img-top {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s;
+        }
+
+        .card-link:hover {
+            text-decoration: none;
+            color: inherit;
+            transform: translateY(-5px);
+        }
+
+        .card-link .card {
+            height: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-link:hover .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
 
@@ -35,16 +65,36 @@
                     <li><strong>Surangama DASGUPTA</strong>, Présidente</li>
                     <li><strong>Lokeshwari DASGUPTA</strong>, Secrétaire</li>
                     <li><strong>Igor Rosenberg</strong>, Trésorier</li>
-                    <li><strong>Suramya Pushan DASGUPTA</strong>, Membre d’honneur</li>
+                    <li><strong>Suramya Pushan DASGUPTA</strong>, Membre d'honneur</li>
                 </ul>
 
-        <embed src="ressources/Familia-Surangama-2025-01.pdf" width="100%" height="600px" type="application/pdf">
+                <h2 class="mt-5">Documents</h2>
+                <div class="row mt-4 justify-content-center">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                        <a href="ressources/Familia-Surangama-2025-01.pdf" target="_blank" class="card-link">
+                            <div class="card pdf-preview-card">
+                                <img src="ressources/Familia-Surangama-2025-01.png" class="card-img-top" alt="Familia Surangama 2025">
+                                <div class="card-body">
+                                    <h5 class="card-title">Familia Surangama 2025</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                        <a href="ressources/Suramya Pushan in Biot in December 2025.pdf" target="_blank" class="card-link">
+                            <div class="card pdf-preview-card">
+                                <img src="ressources/Suramya Pushan in Biot in December 2025.jpg" class="card-img-top" alt="Suramya Pushan in Biot">
+                                <div class="card-body">
+                                    <h5 class="card-title">Suramya Pushan in Biot - December 2025</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </div>
 
-  </div>
-  
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8Fq94+gU3ZWv+mZ4yx9fWIy4K9lA9v+PozoTeqzPIM5pT2" crossorigin="anonymous"></script>
