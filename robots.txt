@@ -5,3 +5,6 @@ User-agent: *
 Allow: /
 
 Disallow: /favicons/
+
+# Sitemap location
+Sitemap: https://samavarta-france.github.io/website/sitemap.xml
