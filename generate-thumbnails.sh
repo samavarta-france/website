@@ -6,7 +6,7 @@ set -e
 
 # Configuration
 INDEX_FILE="index.html"
-THUMB_DIR="thumbnails"
+THUMB_DIR="ressources/thumbnails"
 THUMB_WIDTH=800
 WEBP_QUALITY=85
 FORCE=false

@@ -6,7 +6,7 @@ set -e
 
 # Configuration
 INDEX_FILE="index.html"
-THUMB_DIR="thumbnails"
+THUMB_DIR="ressources/thumbnails"
 
 # Colors
 GREEN='\033[0;32m'
