@@ -24,6 +24,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous"
     >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
         .pdf-preview-card .card-img-top {
@@ -54,29 +55,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .portfolio-card {
-            text-align: center;
-            padding: 2rem;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            border: none;
-        }
-
-        .portfolio-card .card-title {
-            color: white;
-            font-size: 1.25rem;
-            margin: 0;
-        }
-
-        .portfolio-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
     </style>
 </head>
 <body>
@@ -110,18 +88,36 @@
 
             <section>
                 <h2 class="mt-5">Activités</h2>
-                <ul>
-                    <li>Organisation de spectacles</li>
-                    <li>Organisation d'ateliers</li>
-                    <li>Organisation de cours</li>
-                    <li>Billetterie</li>
-                    <li>Buvette</li>
-                    <li>Vente d'objets publicitaires liés à la promotion d'artistes</li>
-                </ul>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong>Concerts et spectacles</strong></h3>
+                        <p>Programmes de concerts de musique classique indienne et spectacles de danse.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong>Ateliers et masterclasses</strong></h3>
+                        <p>Masterclasses pour tous les niveaux, animées par nos artistes professionnels.</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong>Programmes éducatifs</strong></h3>
+                        <p>Interventions dans les écoles, centres culturels et établissements éducatifs pour promouvoir les arts indiens.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong>Participation aux festivals</strong></h3>
+                        <p>Présence lors de festivals culturels et événements artistiques en France et en Europe.</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong>Services complémentaires</strong></h3>
+                        <p>Billetterie et Buvette.</p>
+                    </div>
+                </div>
             </section>
 
             <section>
-                <h2 class="mt-5">Membres</h2>
+                <h2 class="mt-5">Membres du bureau</h2>
                 <ul>
                     <li><strong>Surangama DASGUPTA</strong>, Présidente</li>
                     <li><strong>Lokeshwari DASGUPTA</strong>, Secrétaire</li>
@@ -193,7 +189,7 @@
                         <div class="card pdf-preview-card">
                             <img src="ressources/Suramya Pushan in Biot in December 2025.jpg" class="card-img-top" alt="Suramya Pushan in Biot">
                             <div class="card-body">
-                                <h3 class="card-title mb-0 fs-5">Suramya Pushan à Biot, France<br><small class="text-muted">Décembre 2025</small></h3>
+                                <h3 class="card-title mb-0 fs-5">Suramya Pushan - Biot, France<br><small class="text-muted">Décembre 2025</small></h3>
                             </div>
                         </div>
                     </a>
@@ -268,10 +264,69 @@
             </div>
             </section>
 
+            <section>
+                <h2 class="mt-5">Contact</h2>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong><i class="bi bi-envelope"></i> Email</strong></h3>
+                        <p><a href="mailto:samavarta.france@gmail.com">samavarta.france@gmail.com</a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong><i class="bi bi-telephone"></i> Téléphone</strong></h3>
+                        <p><a href="tel:+33650293931">+33 6 50 29 39 31</a></p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong><i class="bi bi-instagram"></i> Instagram</strong></h3>
+                        <p><a href="https://www.instagram.com/samavarta.france" target="_blank" rel="noopener noreferrer">@samavarta.france</a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h5"><strong><i class="bi bi-facebook"></i> Facebook</strong></h3>
+                        <p><a href="https://www.facebook.com/samavartafrance" target="_blank" rel="noopener noreferrer">Samavarta France</a></p>
+                    </div>
+                </div>
+            </section>
+
             </div>
         </div>
     </div>
 </main>
+
+<footer class="bg-light mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Association Samavarta</h5>
+                <p class="small">
+                    Association Loi 1901<br>
+                    SIRET 994 188 928 00018<br>
+                    RNA W061017803
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact</h5>
+                <p class="small">
+                    <a href="mailto:samavarta.france@gmail.com">samavarta.france@gmail.com</a><br>
+                    <a href="tel:+33650293931">+33 6 50 29 39 31</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5>Réseaux sociaux</h5>
+                <p class="small">
+                    <a href="https://www.instagram.com/samavarta.france" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+                    <a href="https://www.facebook.com/samavartafrance" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="small mb-0">&copy; 2025 Association Samavarta - Tous droits réservés</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
