@@ -1,0 +1,7 @@
+# robots.txt for Association Samavarta
+# https://samavarta-france.github.io/website/
+
+User-agent: *
+Allow: /
+
+Disallow: /favicons/
