@@ -44,10 +44,17 @@ echo ""
 
 # Function to convert img tag to picture tag with WebP
 convert_to_picture() {
-    local img_src="$1"
-    local basename=$(basename "$img_src")
-    local filename="${basename%.*}"
-    local thumb_webp="$THUMB_DIR/${filename}_thumb.webp"
+    local img_src
+    local basename
+    local filename
+    local thumb_webp
+    local img_src_escaped
+    local thumb_webp_escaped
+
+    img_src="$1"
+    basename=$(basename "$img_src")
+    filename="${basename%.*}"
+    thumb_webp="$THUMB_DIR/${filename}_thumb.webp"
 
     # Check if thumbnail exists
     if [ ! -f "$thumb_webp" ]; then
@@ -65,8 +72,8 @@ convert_to_picture() {
     echo -e "${BLUE}Processing:${NC} $img_src -> $thumb_webp"
 
     # Escape special characters for sed
-    local img_src_escaped=$(echo "$img_src" | sed 's/[\/&]/\\&/g')
-    local thumb_webp_escaped=$(echo "$thumb_webp" | sed 's/[\/&]/\\&/g')
+    img_src_escaped=$(echo "$img_src" | sed 's/[\/&]/\\&/g')
+    thumb_webp_escaped=$(echo "$thumb_webp" | sed 's/[\/&]/\\&/g')
 
     # Replace <img src="ORIGINAL"> with <picture><source srcset="THUMB.webp" type="image/webp"><img src="ORIGINAL">
     # This preserves all img attributes (class, alt, etc.)

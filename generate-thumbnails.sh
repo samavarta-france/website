@@ -15,6 +15,7 @@ FORCE=false
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
+RED='\033[0;31m'
 NC='\033[0m'
 
 # Parse arguments
@@ -69,10 +70,15 @@ echo ""
 
 # Thumbnail generation function
 generate_thumb() {
-    local input="$1"
-    local basename=$(basename "$input")
-    local filename="${basename%.*}"
-    local output="$THUMB_DIR/${filename}_thumb.webp"
+    local input
+    local basename
+    local filename
+    local output
+
+    input="$1"
+    basename=$(basename "$input")
+    filename="${basename%.*}"
+    output="$THUMB_DIR/${filename}_thumb.webp"
 
     # Check if source file exists
     if [ ! -f "$input" ]; then
@@ -152,7 +158,7 @@ echo "Summary:"
 echo "   Total images in index.html: $total_images"
 echo "   Thumbnails generated: $generated"
 echo "   Already existing (skipped): $skipped"
-[ $errors -gt 0 ] && echo "   Errors: $errors"
+[ $errors -gt 0 ] && echo -e "${RED}   Errors: $errors${NC}"
 echo ""
 echo "Thumbnails available:"
 find "$THUMB_DIR" -name "*_thumb.webp" -type f 2>/dev/null | while read -r f; do
