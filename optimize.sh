@@ -31,7 +31,7 @@ if [ ! -d "$THUMB_DIR" ]; then
 fi
 
 # Extract all images from index.html that should use thumbnails
-images=$(grep -oP 'src="\K[^"]*ressources/[^"]*\.(jpg|png|JPG|PNG)(?=")' "$INDEX_FILE" | sort -u)
+images=$(grep -oP 'src="\K[^"]*ressources/[^"]*\.(?i:jpg|jpeg|png)(?=")' "$INDEX_FILE" | sort -u)
 
 if [ -z "$images" ]; then
     echo "WARNING: No images found in $INDEX_FILE"
@@ -62,9 +62,10 @@ convert_to_picture() {
         return 1
     fi
 
-    # Check if this image is already wrapped in a <picture> tag
-    # Look for pattern: <picture>...<img src="img_src"...>...</picture>
-    if grep -q "<picture>.*<img src=\"${img_src}\"" "$INDEX_FILE"; then
+    # Check if this image is already optimized via srcset
+    # Look for the thumbnail webp reference in the HTML
+    thumb_webp_pattern=$(echo "$thumb_webp" | sed 's/[\/&]/\\&/g')
+    if grep -q "srcset=\"${thumb_webp_pattern}\"" "$INDEX_FILE"; then
         echo -e "SKIP: Already optimized: $img_src"
         return 2
     fi

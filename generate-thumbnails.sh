@@ -55,8 +55,8 @@ echo "Thumbnail directory: $THUMB_DIR/"
 echo ""
 
 # Extract all images referenced in index.html
-# Look for src="ressources/..." with jpg, png, JPG, PNG
-images=$(grep -oP 'src="\K[^"]*ressources/[^"]*\.(jpg|png|JPG|PNG)(?=")' "$INDEX_FILE" | sort -u)
+# Look for src="ressources/..." with jpg, jpeg, png (case-insensitive)
+images=$(grep -oP 'src="\K[^"]*ressources/[^"]*\.(?i:jpg|jpeg|png)(?=")' "$INDEX_FILE" | sort -u)
 
 if [ -z "$images" ]; then
     echo "WARNING: No images found in $INDEX_FILE"
